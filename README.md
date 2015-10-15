@@ -9,14 +9,12 @@ Download and install [Vagrant](https://www.vagrantup.com/downloads.html)
 
 Make sure you are at least at Vagrant version 1.5 or the steps below may not work for you.
 
-If you are on Windows use the [Manual Install](#manual-install) instructions.
-
 Otherwise for UNIX and UNIX-like users just clone and go. Like this: 
 
 ```
-$ git clone git@github.com:RMcLeod79/magento2box.git
+$ git clone git@github.com:RMcLeod79/magento2dev.git
 ...
-$ cd magento2box
+$ cd magento2dev
 ...
 $ vagrant box add magento2 magento2.box
 ...
