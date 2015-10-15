@@ -7,8 +7,6 @@ Download and install [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 
 Download and install [Vagrant](https://www.vagrantup.com/downloads.html)
 
-Make sure you are at least at Vagrant version 1.5 or the steps below may not work for you.
-
 ```
 $ git clone git@github.com:RMcLeod79/magento2dev.git
 ...
