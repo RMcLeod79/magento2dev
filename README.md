@@ -9,8 +9,6 @@ Download and install [Vagrant](https://www.vagrantup.com/downloads.html)
 
 Make sure you are at least at Vagrant version 1.5 or the steps below may not work for you.
 
-Otherwise for UNIX and UNIX-like users just clone and go. Like this: 
-
 ```
 $ git clone git@github.com:RMcLeod79/magento2dev.git
 ...
