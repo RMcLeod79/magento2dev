@@ -9,7 +9,8 @@ git clone -b develop git@github.com:magento/magento2.git htdocs
 
 cd htdocs && composer install
 
+cd ../
 vagrant box add magento2 magento2.box
 
-echo "Now run vagrant up and vagrant ssh\n"
+echo "Now run vagrant up and vagrant ssh"
 echo "Once logged into the VM run ./install.sh"

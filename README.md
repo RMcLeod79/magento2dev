@@ -12,9 +12,13 @@ $ git clone git@github.com:RMcLeod79/magento2dev.git
 ...
 $ cd magento2dev
 ...
-$ vagrant box add magento2 magento2.box
+$ ./setup.sh
 ...
 $ vagrant up
+...
+$ vagrant ssh
+...
+$ ./install.sh
 ```
 
 Add this to your hosts file:
@@ -38,3 +42,16 @@ and it should show the Magento 2 Store home page.
 The Magento2 files can be found in ./htdocs these are shared to /var/www/magento2 on the guest machine
 
 All passwords on the server (sudo, MySQL root etc.) are vagrant
+
+## Magento 2 bug
+When you try to login to the admin you will get an error, this error is something to do with config cache. To get round it:
+```
+$ vagrant ssh
+...
+$ cd /var/www/magento2
+...
+$ rm -rf var/cache
+```
+Now refresh the admin page and you will see the dashboard. Try navigating to System -> Cache and you will get the same error again. Remove the cache folder again and refresh you will now see the cache settings, disable config cache and the problem goes away.
+
+The problem is to do with when Magento tries to unserialize the cache data, feel free to find a fix and PR it to [Magento](https://github.com/magento/magento2)
