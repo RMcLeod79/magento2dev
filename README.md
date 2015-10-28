@@ -28,11 +28,12 @@ Add this to your hosts file:
 
 ```
 192.168.7.7 magento2.dev
+192.168.7.7 php7.dev
 ```
 
 There are also various vagrant plugins that can help you update your dns. See [local-domain-resolution](https://github.com/mitchellh/vagrant/wiki/Available-Vagrant-Plugins#local-domain-resolution).  
 
-At this point you should be able to point your  browser at:
+At this point you should be able to point your browser at:
 
 ```
 http://magento2.dev/
@@ -40,9 +41,15 @@ http://magento2.dev/
 
 and it should show the Magento 2 Store home page.
 
+```
+http://php7.dev/
+```
+
+and it should show the PHP info page.
 
 ## Server Setup
-The Magento2 files can be found in ./htdocs these are shared to /var/www/magento2 on the guest machine
+The Magento2 files can be found in `./magento2` these are shared to `/var/www/magento2` on the guest machine
+The PHP7 files can be found in `./php7` these are shared to `/var/www/php7` on the guest machine
 
 All passwords on the server (sudo, MySQL root etc.) are vagrant
 
