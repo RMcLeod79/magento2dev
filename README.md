@@ -1,25 +1,6 @@
 ## Summary
 magento2box is a Vagrant image based on Rasmus Lerdorf's [php7dev](https://github.com/rlerdorf/php7dev) Vagrant image. It comes preconfigured with PHP 7, Nginx, MySQL 5.6 and a base install of the Magento 2.
 
-## Update PHP 7 to the most recent commit
-SSH into the VM `vagrant ssh`
-
-```
-$ makephp 7
-...
-$ sudo service php-fpm restart
-```
-
-## Swith PHP Version
-PHP 5.3, 5.4, 5.5 and 5.6 are also available and can easily be switched to.
-
-SSH into the VM `vagrant ssh`
-
-```
-$ newphp 56
-Activating PHP 5.6.13 and restarting php-fpm
-```
-
 ## Installation
 
 Download and install [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
@@ -104,3 +85,22 @@ $ rm -rf var/cache
 Now refresh the admin page and you will see the dashboard. Try navigating to System -> Cache and you will get the same error again. Remove the cache folder again and refresh you will now see the cache settings, disable config cache and the problem goes away.
 
 The problem is to do with when Magento tries to unserialize the cache data, feel free to find a fix and PR it to [Magento](https://github.com/magento/magento2)
+
+## Update PHP 7 to the most recent commit
+SSH into the VM `vagrant ssh`
+
+```
+$ makephp 7
+...
+$ sudo service php-fpm restart
+```
+
+## Swith PHP Version
+PHP 5.3, 5.4, 5.5 and 5.6 are also available and can easily be switched to.
+
+SSH into the VM `vagrant ssh`
+
+```
+$ newphp 56
+Activating PHP 5.6.13 and restarting php-fpm
+```
