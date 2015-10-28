@@ -47,6 +47,26 @@ http://php7.dev/
 
 and it should show the PHP info page.
 
+## Vagrant Up fails with Warning: Authentication failure. Retrying...
+
+If this happens hit `ctrl+c` make a note of the port number vagrant mapped for ssh (usually 2222) and manually ssh into the VM the password is vagrant
+
+```
+ssh -p 2222 vagrant@127.0.0.1
+```
+
+Once you're logged into the VM run the following:
+
+```
+wget https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub -O .ssh/authorized_keys
+chmod 700 .ssh
+chmod 600 .ssh/authorized_keys
+chown -R vagrant:vagrant .ssh
+logout
+```
+
+Now run `vagrant halt` this will replace the key with a safe one. Now run `vagrant up` and everything should be fine. Don't forget to run `vagrant ssh` followed by `./install.sh` to install Magento2.
+
 ## Server Setup
 The Magento2 files can be found in `./magento2` these are shared to `/var/www/magento2` on the guest machine
 The PHP7 files can be found in `./php7` these are shared to `/var/www/php7` on the guest machine
