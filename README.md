@@ -10,7 +10,7 @@ $ makephp 7
 $ sudo service php-fpm reload
 ```
 
-## Swith to PHP Version
+## Swith PHP Version
 PHP 5.3, 5.4, 5.5 and 5.6 are also available and can easily be switched to.
 
 SSH into the VM `vagrant ssh`
