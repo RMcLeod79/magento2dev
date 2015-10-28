@@ -11,7 +11,7 @@ echo "<?php\nphpinfo();" > php7/index.php
 echo "Cloning Magento 2, this can take a while!"
 git clone -b develop git@github.com:magento/magento2.git magento2
 
-cd htdocs && composer install --ignore-platform-reqs
+cd magento2 && composer install --ignore-platform-reqs
 
 cd ../
 vagrant box add magento2 magento2.box
