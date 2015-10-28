@@ -1,11 +1,15 @@
 #!/bin/bash
-if [ -d "htdocs" ]; then
+if [ -d "magento2" ]; then
     echo "Magento is already installed, run vagrant up"
     exit 1
 fi
 
+echo "Creating PHP7 dev environment"
+mkdir php7
+echo "<?php\nphpinfo();" > php7/index.php
+
 echo "Cloning Magento 2, this can take a while!"
-git clone -b develop git@github.com:magento/magento2.git htdocs
+git clone -b develop git@github.com:magento/magento2.git magento2
 
 cd htdocs && composer install
 
