@@ -7,7 +7,7 @@ SSH into the VM `vagrant ssh`
 ```
 $ makephp 7
 ...
-$ sudo service php-fpm reload
+$ sudo service php-fpm restart
 ```
 
 ## Swith PHP Version
