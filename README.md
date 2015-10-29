@@ -9,10 +9,7 @@ Download and install [Vagrant](https://www.vagrantup.com/downloads.html)
 
 ```
 $ git clone git@github.com:RMcLeod79/magento2dev.git
-```
-Now copy magento2.box into magento2dev
-
-```
+...
 $ cd magento2dev
 ...
 $ ./setup.sh
