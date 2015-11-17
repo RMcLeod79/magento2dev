@@ -14,8 +14,5 @@ git clone -b develop git@github.com:magento/magento2.git magento2
 
 cd magento2 && composer install --ignore-platform-reqs
 
-cd ../
-vagrant box add magento2 magento2.box
-
 echo "Now run vagrant up and vagrant ssh"
 echo "Once logged into the VM run ./install.sh"
