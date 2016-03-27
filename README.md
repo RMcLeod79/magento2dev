@@ -8,7 +8,7 @@ Download and install [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 Download and install [Vagrant](https://www.vagrantup.com/downloads.html)
 
 ```
-$ git clone git@github.com:RMcLeod79/magento2dev.git
+$ git clone git@github.com:WeareJH/magento2dev.git
 ...
 $ cd magento2dev
 ...
